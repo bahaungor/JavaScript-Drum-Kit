@@ -7,7 +7,9 @@
 </head>
 <body>
 
-
+  <div class="credit-container">
+    <div class="credit">Made By Bahadır UNGOR</div>
+  </div>
   <div class="keys">
     <div data-key="65" class="key">
       <kbd>A</kbd>
@@ -58,14 +60,17 @@
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
 <script>
+  const credit = document.querySelector(".credit-container")
   window.addEventListener("keydown", function(e) {
     const sound = document.querySelector(`audio[data-key="${e.keyCode}"]`)
     const key = document.querySelector(`.key[data-key="${e.keyCode}"]`)
+
     if (sound == null || sound == undefined) return;
     console.log(sound);
     sound.currentTime = 0;
     sound.play();
     key.classList.add("playing");
+    credit.classList.add("playing");
   })
 
   const keys = document.querySelectorAll(".key");
@@ -73,6 +78,7 @@
     console.log(e);
     if(e.propertyName !== "box-shadow") return;
     key.classList.remove("playing");
+    credit.classList.remove("playing");
   } ))
 </script>
 
