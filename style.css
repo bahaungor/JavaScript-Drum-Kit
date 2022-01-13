@@ -6,8 +6,29 @@ html {
 
 body,html {
   margin: 0;
-  padding: 0;
   font-family: sans-serif;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px
+}
+
+.credit{
+  color: white;
+  font-size: 4rem;
+  text-align: center;
+  font-family: 'Brush Script MT', cursive;
+
+}
+
+.credit-container{
+  border: .4rem solid black;
+  background: rgba(0,0,0,0.4);
+  padding: 20px 50px;
+  align-self: center;
+  transition: all .15s ease;
 }
 
 .keys {
@@ -24,7 +45,7 @@ body,html {
   margin: 1rem;
   font-size: 1.5rem;
   padding: 1rem .5rem;
-  transition: all .07s ease;
+  transition: all .15s ease;
   width: 10rem;
   text-align: center;
   color: white;
